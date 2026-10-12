@@ -1,0 +1,72 @@
+
+.about-page {
+  min-height: 80vh;
+  padding: 60px 8%;
+  background: #f8faff;
+  color: #172554;
+}
+
+.about-hero {
+  max-width: 850px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.about-hero h1 {
+  margin-bottom: 20px;
+  color: #4f46e5;
+  font-size: 42px;
+}
+
+.about-hero p {
+  color: #64748b;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.about-card {
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(30, 41, 59, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(79, 70, 229, 0.12);
+}
+
+.about-card h2 {
+  margin-bottom: 15px;
+  color: #4f46e5;
+  font-size: 23px;
+}
+
+.about-card p {
+  color: #64748b;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .about-page {
+    padding: 40px 20px;
+  }
+
+  .about-hero h1 {
+    font-size: 32px;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+}

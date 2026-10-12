@@ -1,0 +1,186 @@
+
+.job-details-page {
+  min-height: 100vh;
+  padding: 35px 20px 60px;
+  background: #f8fafc;
+  color: #1e293b;
+}
+
+.job-details-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.back-to-jobs {
+  display: inline-block;
+  margin-bottom: 22px;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.back-to-jobs:hover {
+  text-decoration: underline;
+}
+
+.job-details-card {
+  padding: 32px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+}
+
+.details-job-type {
+  display: inline-block;
+  padding: 7px 12px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.job-details-card h1 {
+  margin: 18px 0 8px;
+  font-size: 32px;
+  line-height: 1.3;
+}
+
+.details-company {
+  margin: 8px 0;
+  color: #2563eb;
+  font-size: 21px;
+}
+
+.details-location,
+.details-experience {
+  color: #64748b;
+  line-height: 1.7;
+}
+
+.details-section {
+  margin-top: 28px;
+}
+
+.details-section h3 {
+  margin-bottom: 14px;
+  font-size: 20px;
+  color: #0f172a;
+}
+
+.details-section p {
+  color: #475569;
+  line-height: 1.8;
+}
+
+.details-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.details-skills span {
+  padding: 8px 12px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Eligibility */
+.eligibility-section {
+  padding: 24px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.eligibility-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 13px 0;
+  border-bottom: 1px solid #e2e8f0;
+  line-height: 1.6;
+}
+
+.eligibility-item:last-child {
+  border-bottom: none;
+}
+
+.eligibility-item strong {
+  min-width: 150px;
+  color: #334155;
+}
+
+.eligibility-item span {
+  text-align: right;
+  color: #475569;
+  overflow-wrap: anywhere;
+}
+
+/* Apply Button */
+.details-actions {
+  margin-top: 28px;
+}
+
+.details-apply-btn {
+  display: inline-block;
+  padding: 14px 22px;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 9px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.details-apply-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.eligibility-note {
+  margin-top: 18px;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .job-details-page {
+    padding: 24px 14px 40px;
+  }
+
+  .job-details-card {
+    padding: 20px;
+  }
+
+  .job-details-card h1 {
+    font-size: 25px;
+  }
+
+  .eligibility-section {
+    padding: 16px;
+  }
+
+  .eligibility-item {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .eligibility-item strong {
+    min-width: 0;
+  }
+
+  .eligibility-item span {
+    text-align: left;
+  }
+
+  .details-apply-btn {
+    display: block;
+    text-align: center;
+  }
+}
