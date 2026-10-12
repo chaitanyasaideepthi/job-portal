@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/chaitanyasaideepthi/job-portal/issues"
   },
-  "homepage": "https://github.com/chaitanyasaideepthi/job-portal#readme"
+  "homepage": "https://github.com/chaitanyasaideepthi/job-portal#readme",
+  "dependencies": {
+    "firebase": "^13.0.0"
+  }
 }

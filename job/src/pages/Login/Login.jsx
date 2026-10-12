@@ -32,7 +32,9 @@ function Login() {
       );
 
       alert("Login successful! Welcome to FreshStart.");
-      navigate("/");
+
+      // Navigate to Home after successful login
+      navigate("/home", { replace: true });
     } catch (err) {
       if (
         err.code === "auth/invalid-credential" ||
@@ -42,8 +44,10 @@ function Login() {
         setError("Invalid email or password. Please try again.");
       } else if (err.code === "auth/invalid-email") {
         setError("Please enter a valid email address.");
+      } else if (err.code === "auth/too-many-requests") {
+        setError("Too many attempts. Please try again later.");
       } else {
-        setError(err.message || "Login failed. Please try again.");
+        setError("Login failed. Please check your details and try again.");
       }
     } finally {
       setLoading(false);
@@ -56,7 +60,11 @@ function Login() {
         <h2>Welcome Back!</h2>
         <p>Login to your FreshStart account.</p>
 
-        {error && <div className="login-error">{error}</div>}
+        {error && (
+          <div className="login-error" role="alert">
+            {error}
+          </div>
+        )}
 
         <label htmlFor="email">Email Address</label>
         <input
@@ -85,7 +93,8 @@ function Login() {
         </button>
 
         <p className="login-register">
-          Don't have an account? <Link to="/register">Register</Link>
+          Don't have an account?{" "}
+          <Link to="/register">Register</Link>
         </p>
       </form>
     </div>
@@ -93,4 +102,5 @@ function Login() {
 }
 
 export default Login;
+
 

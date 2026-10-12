@@ -17,30 +17,36 @@ function App() {
       <Navbar />
 
       <Routes>
-        {/* Home Page */}
-        <Route path="/" element={<Home />} />
+        {/* Open Register page first */}
+        <Route
+          path="/"
+          element={<Navigate to="/register" replace />}
+        />
 
-        {/* Explore Jobs */}
-        <Route path="/jobs" element={<Jobs />} />
-
-        {/* Job Details */}
-        <Route path="/jobs/:id" element={<JobDetails />} />
-
-        {/* Saved Jobs */}
-        <Route path="/saved-jobs" element={<SavedJobs />} />
-
-        {/* Authentication */}
+        {/* Authentication pages */}
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
 
+        {/* Home page after login */}
+        <Route path="/home" element={<Home />} />
+
+        {/* Other pages */}
+        <Route path="/jobs" element={<Jobs />} />
+        <Route path="/jobs/:id" element={<JobDetails />} />
+        <Route path="/saved-jobs" element={<SavedJobs />} />
+
         {/* Redirect invalid routes */}
-        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route
+          path="*"
+          element={<Navigate to="/register" replace />}
+        />
       </Routes>
     </BrowserRouter>
   );
 }
 
 export default App;
+
 
 
 
